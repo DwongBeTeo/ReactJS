@@ -6,7 +6,7 @@ export default class TddProductAdd extends Component {
         this.state ={
             id:'',
             title:'',
-            status:''
+            status:'',
         }
     }
     tddHandleChange = (event)=>{
@@ -19,7 +19,7 @@ export default class TddProductAdd extends Component {
     //submit form
     tddHandleSubmit = (ev)=>{
         ev.preventDefault();
-        this.props.onSummit(this.state);
+        this.props.onSubmit(this.state);
     }
   render() {
     return (

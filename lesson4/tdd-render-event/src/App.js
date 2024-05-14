@@ -31,7 +31,7 @@ export default class App extends Component {
         <hr/>
         <TddProductlist renderProducts={this.state.products}/>
         <hr/>
-        <TddProductAdd onSummit={this.tddHandleSubmit}/>
+        <TddProductAdd onSubmit={this.tddHandleSubmit}/>
       </div>
     )
   }

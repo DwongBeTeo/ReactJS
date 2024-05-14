@@ -4,12 +4,12 @@ export default class TddProductlist extends Component {
   render() {
     let {renderProducts} = this.props;
     console.log("Product:",renderProducts);
-    // let fnStatus =(param)=>{
-    //     if(param===1){
-    //     return 'Active';
-    //     }
-    //     return 'NonActive';
-    // }
+    let fnStatus =(param)=>{
+        if(param===1){
+        return 'Active';
+        }
+        return 'NonActive';
+    }
     
     let elementProduct = renderProducts.map((item,index)=>{
         return(
@@ -17,10 +17,10 @@ export default class TddProductlist extends Component {
                 <tr key={index}>
                     <td>{item.id}</td>
                     <td>{item.title}</td>
-                    <td>{item.status===1?'Active':'NonActive'}</td>
-                    {/* <td>
+                    {/* <td>{item.status===1?'Active':'NonActive'}</td> */}
+                    <td>
                         {fnStatus(item.status)} 
-                    </td> */}
+                    </td>
                 </tr>
             </>
         )
