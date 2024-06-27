@@ -13,7 +13,7 @@ export default function TddTaskAddOrEdit({renderTddTask,renderTddIsAddOrEdit,tdd
     },[renderTddTask])
 
      // tạo tiêu đề form
-     const tddTieuDe = renderTddIsAddOrEdit==true?"Thêm mới task":"Sửa thông tin task";
+     const tddTieuDe = renderTddIsAddOrEdit == true?"Thêm mới task":"Sửa thông tin task";
     //hàm xử lý sự kiện thay đổi trên điều khiển
     const tddHandleChange = (tddEvent) => {
         let name = tddEvent.target.name;
@@ -26,7 +26,7 @@ export default function TddTaskAddOrEdit({renderTddTask,renderTddIsAddOrEdit,tdd
             
         })
     }
-    console.log(tddTask);
+    
     const tddHandleSubmit =(tddEvent)=>{
         tddEvent.preventDefault();
         tddOnSubmit(tddTask);
@@ -50,7 +50,7 @@ export default function TddTaskAddOrEdit({renderTddTask,renderTddIsAddOrEdit,tdd
             <div className="input-group mb-3">
                 <span className="input-group-text" id="basic-addon3">Task Level</span>
                 <select name='tdd_level' value={tddTask.tdd_level} onChange={tddHandleChange} className="form-control" 
-                placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon3"> 
+                placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon"> 
                 <option value={'Small'}>Small</option>
                 <option value={'Medium'}>Medium</option>
                 <option value={'High'}>High</option>
