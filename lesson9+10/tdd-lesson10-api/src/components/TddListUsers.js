@@ -7,7 +7,7 @@ export default function TddListUsers({renderTddListUsers,onTddDelete}) {
     let tddElementUsers = renderTddListUsers.map((tddUsers,index)=>{
         return(
             
-                <tr>
+                <tr key={index}>
                     <th>{tddUsers.id}</th>
                     <th>{tddUsers.UserName}</th>
                     <th>{tddUsers.PassWord}</th>
