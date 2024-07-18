@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import axios from '../api/TddApi'  
 
 
-export default function TddFormAddOrEdit({onTddClose,onTddSubmitForm, renderUser}) {
-    console.log(renderUser);
+export default function TddFormAddOrEdit({onTddClose,onTddSubmitForm, renderUsers}) {
+    console.log(renderUsers);
     const [tddId,setTddId] =useState(0);
     const [tddHoSV,setTddHoSV] =useState("");
     const [tddTenSV,setTddTenSV] =useState("");
@@ -14,16 +14,16 @@ export default function TddFormAddOrEdit({onTddClose,onTddSubmitForm, renderUser
     const [tddDiemTrungBinh,setTddDiemTrungBinh] =useState("");
 
     useEffect(()=>{
-        setTddId(renderUser.id)
-        setTddHoSV(renderUser.HoSV)
-        setTddTenSV(renderUser.TenSV)
-        setTddNgaySinh(renderUser.NgaySinh)
-        setTddNoiSinh(renderUser.NoiSinh)
-        setTddMaKH(renderUser.MaKH)
-        setTddHocBong(renderUser.HocBong)
-        setTddDiemTrungBinh(renderUser.DiemTrungBinh)
+        setTddId(renderUsers.id)
+        setTddHoSV(renderUsers.HoSV)
+        setTddTenSV(renderUsers.TenSV)
+        setTddNgaySinh(renderUsers.NgaySinh)
+        setTddNoiSinh(renderUsers.NoiSinh)
+        setTddMaKH(renderUsers.MaKH)
+        setTddHocBong(renderUsers.HocBong)
+        setTddDiemTrungBinh(renderUsers.DiemTrungBinh)
 
-    },[renderUser])
+    },[renderUsers])
 
     const tddHandleClose=()=>{
         onTddClose(false)
